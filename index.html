@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DjSets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #000000;
+            --brand: #DEB038;
+            --bg-page: #EDEBDE;
+            --surface-dark: #1D2633;
+            --footer-bg: #306A9F;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            /* poids normal par défaut */
+        }
+
+        h1 {
+            font-weight: 700;
+            /* titre principal */
+
+        }
+
+        h2 {
+            font-weight: 600;
+            /* sous-titres des features */
+        }
+
+        p {
+            font-weight: 400;
+            /* texte normal (optionnel) */
+        }
+
+        button,
+        .btn-header {
+            background-color: var(--brand);
+            color: #000;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,7 +82,7 @@
         </section>
 
         <!-- les arguments/features -->
-        <section class="features" aria-label="Avantages du service DjSets">
+        <section class="features">
             <article class="feature-card">
                 <img src="assets/calendar.svg" alt="">
                 <h2>Dates validées par une équipe de passionnés</h2>
@@ -60,13 +101,14 @@
                 <p>Playlist et mix pour te mettre dans l’ambiance</p>
             </article>
         </section>
+    </main>
 
         <!-- le poied de page -->
         <footer>
             <div class="footer-top">
                 <p>2025 © DjSets</p>
 
-                <nav aria-label="Liens de bas de page">
+                <nav>
                     <a href="#">Mentions légales</a>
                     <a href="#">Politique de confidentialité</a>
                 </nav>
