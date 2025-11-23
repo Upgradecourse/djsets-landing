@@ -5,45 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DjSets</title>
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --text-main: #000000;
-            --brand: #DEB038;
-            --bg-page: #EDEBDE;
-            --surface-dark: #1D2633;
-            --footer-bg: #306A9F;
+            --font-main: "Inter", sans-serif;
+            --color-primary: #000000;
+            --color-text: #111;
+            --color-accent: #DEB038;
+        }
+
+        /* Reset simple et début propre */
+        * {
+            box-sizing: border-box;
+
         }
 
         body {
-            font-family: "Inter", sans-serif;
-            font-weight: 400;
-            /* poids normal par défaut */
+
+            margin: 0;
+            /* Supprime les marges par défaut */
+            font-family: var(--font-main);
+            /* Applique ta police */
+            font-size: 16px;
+            /* Taille de police globale */
+            line-height: 1.6;
+            /* Lisibilité améliorée */
+            color: var(--color-primary);
+            /* Couleur de texte globale */
         }
 
-        h1 {
-            font-weight: 700;
-            /* titre principal */
-
+        .hero {
+            text-align: center;
+            /* Centre tout le texte */
+            padding: 3rem 1rem;
+            /* Respire */
+            max-width: 600px;
+            /* Largeur idéale */
+            margin: 0 auto;
+            /* Centre le bloc lui-même */
         }
 
-        h2 {
-            font-weight: 600;
-            /* sous-titres des features */
+        /* Style du formulaire */
+        .newsletter-form {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 0.5rem;
+            /* Espace entre input et bouton */
+            justify-content: center;
+            /* Centre les deux éléments */
         }
 
-        p {
-            font-weight: 400;
-            /* texte normal (optionnel) */
+        .newsletter-form button {
+            padding: 0.75rem 1rem;
+            background: var(--color-accent);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
         }
 
-        button,
-        .btn-header {
-            background-color: var(--brand);
-            color: #000;
+        .header-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .features {
+            max-width: 1200px;
+            /* espace total pour 3x360px + gaps */
+            margin: 4rem auto;
+            padding: 0 1rem;
+
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            /* espace entre les cartes */
+        }
+
+        .feature-card {
+            width: 360px;
+            /* largeur fixe (valorise ta maquette) */
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        footer {
+            background: #f5f5f5;
+            padding: 2rem 0;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: center;
+            /* tout centré sur l’axe X */
+            align-items: center;
+            gap: 4rem;
+            /* espace entre les 3 blocs */
+        }
+
+        /* Liens du nav */
+        footer nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        footer nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* Bloc brand (logo + texte + réseaux) */
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-brand img {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Réseaux sociaux */
+        .social-links {
+            display: flex;
+            gap: 0.75rem;
+            list-style: none;
+            padding: 0;
+            margin-left: 1rem;
+        }
+
+        .social-links img {
+            width: 20px;
+            height: 20px;
+        }
+
+
+        * {
+            outline: 1px solid red;
         }
     </style>
 </head>
@@ -55,7 +164,7 @@
         <div class="header-inner">
 
             <a href="/" class="branding">
-                <img src="assets/logo.svg" alt="DjSets">
+                <img src="assets/logoipsum-283.svg" alt="DjSets">
                 <span>DjSets</span>
             </a>
 
@@ -91,50 +200,41 @@
 
             <article class="feature-card">
                 <img src="assets/location.svg" alt="">
-                <h2>Trouve les meilleurs DJ sets près de chez toi</h2>
+                <h2>Trouve les DJ sets près de chez toi</h2>
                 <p>Découvre les soirées autour de toi</p>
             </article>
 
             <article class="feature-card">
                 <img src="assets/playlist.svg" alt="">
                 <h2>Prépare-toi au son du week-end</h2>
-                <p>Playlist et mix pour te mettre dans l’ambiance</p>
+                <p>Playlist pour te mettre dans l’ambiance</p>
             </article>
         </section>
     </main>
 
-        <!-- le poied de page -->
-        <footer>
-            <div class="footer-top">
-                <p>2025 © DjSets</p>
+    <!-- le poied de page -->
+    <footer>
+        <div class="footer-top">
+            <p>2025 © DjSets</p>
 
-                <nav>
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Politique de confidentialité</a>
-                </nav>
+            <nav>
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+            </nav>
 
-                <div class="footer-brand">
-                    <span>DjSets</span>
-                    <ul class="social-links">
-                        <li><a href="#">
-                                <img src="assets/socials/facebook.svg" alt="logo de facebook">
-                            </a></li>
+            <div class="footer-brand">
+                <img src="assets/logoipsum-283.svg" alt="logo DjSets">
+                <span>DjSets</span>
 
-                        <li><a href="#">
-                                <img src="assets/socials/instagram.svg" alt="logo de instagram">
-                            </a></li>
-
-                        <li><a href="#">
-                                <img src="assets/socials/tiktok.svg" alt="logo de tiktok">
-                            </a></li>
-
-                        <li><a href="#">
-                                <img src="assets/socials/x.svg" alt="logo de twitter">
-                            </a></li>
-                    </ul>
-                </div>
+                <ul class="social-links">
+                    <li><a href="#"><img src="assets/socials/facebook.svg" alt="logo facebook"></a></li>
+                    <li><a href="#"><img src="assets/socials/instagram.svg" alt="logo instagram"></a></li>
+                    <li><a href="#"><img src="assets/socials/tiktok.svg" alt="logo tiktok"></a></li>
+                    <li><a href="#"><img src="assets/socials/x.svg" alt="logo twitter"></a></li>
+                </ul>
             </div>
-        </footer>
+        </div>
+    </footer>
 
 </body>
 
